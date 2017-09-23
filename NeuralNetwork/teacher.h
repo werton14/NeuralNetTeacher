@@ -15,6 +15,7 @@ private:
 
     QList<QList<double> > newHiddenLayWeights;
     QList<QList<double> > newOutputLayWeights;
+    QList<int> wishesValue;
 
     const double lernSpeed = 0.001;
 

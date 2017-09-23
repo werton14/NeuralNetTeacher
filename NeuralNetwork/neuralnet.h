@@ -23,6 +23,12 @@ public:
     void startWith(QList<double>);
     void updateWeights(QList<QList<double> >, QList<QList<double> >);
 
+    int getOutputNeuronsCount() const;
+    int getHiddenNeuronsCount() const;
+    int getInputNeuronsCount() const;
+    QList<Neuron *> getInputLay() const;
+    QList<Neuron *> getHiddenLay() const;
+    QList<Neuron *> getOutputLay() const;
 };
 
 #endif // NEURALNET_H

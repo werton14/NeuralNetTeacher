@@ -1,5 +1,35 @@
 #include "neuralnet.h"
 
+int NeuralNet::getOutputNeuronsCount() const
+{
+    return outputNeuronsCount;
+}
+
+int NeuralNet::getHiddenNeuronsCount() const
+{
+    return hiddenNeuronsCount;
+}
+
+int NeuralNet::getInputNeuronsCount() const
+{
+    return inputNeuronsCount;
+}
+
+QList<Neuron *> NeuralNet::getInputLay() const
+{
+    return inputLay;
+}
+
+QList<Neuron *> NeuralNet::getHiddenLay() const
+{
+    return hiddenLay;
+}
+
+QList<Neuron *> NeuralNet::getOutputLay() const
+{
+    return outputLay;
+}
+
 NeuralNet::NeuralNet(int inputNeuronsCount, int hiddenNeuronsCount, int outputNeuronsCount,
                      QList<QList<double> > weightsHiddenLay, QList<QList<double> > weightsOutputLay) :
     inputNeuronsCount(inputNeuronsCount), hiddenNeuronsCount(hiddenNeuronsCount), outputNeuronsCount(outputNeuronsCount)
