@@ -9,7 +9,6 @@ class Teacher
 private:
     NeuralNet *neuralNet;
 
-    QList<double> inputLayError;
     QList<double> hiddenLayError;
     QList<double> outputLayError;
 

@@ -18,7 +18,7 @@ void Teacher::computeErors()
     int hiddenNeuronCount = neuralNet->getHiddenNeuronsCount();
 
     for(int i = 0; i < hiddenNeuronCount; i++){
-        ou
+        hiddenLayError.push_back();
     }
 
 }

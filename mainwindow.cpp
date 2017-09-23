@@ -24,9 +24,7 @@ void MainWindow::makeListwithRandomValues(int width, int height)
             weightsLay.push_back(tmp);
 
         for(int j = 0; j < height; j++){
-
             tmp.push_back(randomDoubleValues());
-
         }
     }
 }
