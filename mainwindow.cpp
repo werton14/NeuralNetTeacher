@@ -21,11 +21,11 @@ void MainWindow::makeListwithRandomValues(int width, int height)
 
       QList<double> tmp;
 
-            weightsLay.push_back(tmp);
-
         for(int j = 0; j < height; j++){
             tmp.push_back(randomDoubleValues());
         }
+
+         weightsLay.push_back(tmp);
     }
 }
 
