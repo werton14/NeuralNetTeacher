@@ -1,5 +1,10 @@
 ﻿#include "neuron.h"
 
+QList<double> Neuron::getWeights() const
+{
+    return weights;
+}
+
 Neuron::Neuron(int weightsCount, QList<double> weights) : weightsCount(weightsCount), weights(weights)
 {
 

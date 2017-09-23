@@ -14,13 +14,15 @@ void Teacher::computeErors()
         outputLayError.push_back(wishesValue.at(i) - outputLay.at(i)->getOutputSignal());
     }
 
-    QList<Neuron *> hiddenLay = neuralNet->getHiddenLay();
     int hiddenNeuronCount = neuralNet->getHiddenNeuronsCount();
 
     for(int i = 0; i < hiddenNeuronCount; i++){
-        hiddenLayError.push_back();
+        double tmp = 0.0;
+        for(int j = 0; j < outputNeuronCount; j++){
+            tmp += outputLayError.at(i) * outputLay.at(j)->getWeights().at(i);
+        }
+        hiddenLayError.push_back(tmp);
     }
-
 }
 
 void Teacher::computeWeights()

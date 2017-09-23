@@ -24,6 +24,7 @@ public:
     double getOutputSignal() const;
     void setOutputSignal(double value);
     void setWeights(QList<double>);
+    QList<double> getWeights() const;
 };
 
 #endif // NEURON_H
