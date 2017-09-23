@@ -15,6 +15,7 @@ private:
 
 public:
     Neuron(int, QList<double>);
+    Neuron();
 
     void weighInputSignal(int index, double signal);
     void sumWeightedInputSignals();

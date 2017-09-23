@@ -4,9 +4,8 @@ NeuralNet::NeuralNet(int inputNeuronsCount, int hiddenNeuronsCount, int outputNe
                      QList<QList<double> > weightsHiddenLay, QList<QList<double> > weightsOutputLay) :
     inputNeuronsCount(inputNeuronsCount), hiddenNeuronsCount(hiddenNeuronsCount), outputNeuronsCount(outputNeuronsCount)
 {
-    QList<double> nothing;
     for(int i = 0; i < inputNeuronsCount; i++){
-        inputLay.push_back(new Neuron(0, nothing));
+        inputLay.push_back(new Neuron());
     }
 
     for(int i = 0; i < hiddenNeuronsCount; i++){

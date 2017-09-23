@@ -5,6 +5,11 @@ Neuron::Neuron(int weightsCount, QList<double> weights) : weightsCount(weightsCo
 
 }
 
+Neuron::Neuron()
+{
+
+}
+
 double Neuron::getOutputSignal() const
 {
     return outputSignal;
@@ -22,7 +27,6 @@ void Neuron::setWeights(QList<double> value)
 
 void Neuron::weighInputSignal(int index, double signal)
 {
-    weightedInputSignals.clear();
     weightedInputSignals.push_back(signal * weights[index]);
 }
 
@@ -33,14 +37,15 @@ void Neuron::sumWeightedInputSignals()
         tmp += weightedInputSignals.at(i);
     }
     weightedSumInputSignals = tmp;
+    weightedInputSignals.clear();
 }
 
 void Neuron::activationNeuronFunction()
 {
     if(weightedSumInputSignals >= thresholdValue){
-        outputSignal = 1;
+        outputSignal = 1.0;
     }else{
-        outputSignal = 0;
+        outputSignal = 0.0;
     }
 }
 

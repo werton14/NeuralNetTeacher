@@ -1,0 +1,16 @@
+#ifndef TEACHER_H
+#define TEACHER_H
+
+#include "neuralnet.h"
+
+class Teacher
+{
+private:
+    NeuralNet *neuralNet;
+    
+    
+public:
+    Teacher();
+};
+
+#endif // TEACHER_H
