@@ -8,8 +8,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     srand(time(NULL));
+
     ui->setupUi(this);
 
+    parse.writingWeights();
     teacher = new Teacher(neuralNet);
 }
 

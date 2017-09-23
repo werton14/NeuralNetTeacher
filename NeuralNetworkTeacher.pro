@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     NeuralNetwork/neuralnet.cpp \
     NeuralNetwork/neuron.cpp \
     NeuralNetwork/teacher.cpp \
-    qxtspanslider.cpp
+    qxtspanslider.cpp \
+    parse.cpp
 
 
 HEADERS  += mainwindow.h \
@@ -26,6 +27,7 @@ HEADERS  += mainwindow.h \
     NeuralNetwork/neuron.h \
     NeuralNetwork/teacher.h \
     qxtspanslider.h \
-    qxtspanslider_p.h
+    qxtspanslider_p.h \
+    parse.h
 
 FORMS    += mainwindow.ui

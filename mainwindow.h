@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "NeuralNetwork/neuralnet.h"
 #include "NeuralNetwork/teacher.h"
+#include "parse.h"
 
 namespace Ui {
 class MainWindow;
@@ -27,7 +28,7 @@ private:
     Ui::MainWindow *ui;
     NeuralNet *neuralNet;
     Teacher *teacher;
-
+    Parse parse;
 };
 
 #endif // MAINWINDOW_H
