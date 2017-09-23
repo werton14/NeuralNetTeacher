@@ -53,6 +53,3 @@ void NeuralNet::updateWeights(QList<QList<double> > weightsHiddenLay, QList<QLis
         outputLay.at(i)->setWeights(weightsOutputLay.at(i));
     }
 }
-
-
-

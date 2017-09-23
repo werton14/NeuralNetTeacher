@@ -11,6 +11,7 @@ private:
     QList<double> weightedInputSignals;
     double weightedSumInputSignals = 0.0;
     double outputSignal = 0.0;
+    const double thresholdValue = 0.5;
 
 public:
     Neuron(int, QList<double>);

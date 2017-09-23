@@ -37,7 +37,7 @@ void Neuron::sumWeightedInputSignals()
 
 void Neuron::activationNeuronFunction()
 {
-    if(weightedInputSignals >= 0.5){
+    if(weightedInputSignals >= thresholdValue){
         return 1;
     }else{
         return 0;
