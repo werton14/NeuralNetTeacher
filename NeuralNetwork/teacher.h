@@ -16,12 +16,14 @@ private:
     QList<QList<double> > newOutputLayWeights;
     QList<int> wishesValue;
 
-    const double lernSpeed = 0.001;
+    const double learnSpeed = 0.001;
 
-public:
     void computeErors();
     void computeWeights();
-    Teacher();
+
+public:
+    Teacher(NeuralNet *neuralNet);
+    void learn(QList<int> wishesValue);
 };
 
 #endif // TEACHER_H

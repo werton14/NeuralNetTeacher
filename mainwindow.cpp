@@ -8,31 +8,30 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     srand(time(NULL));
-    setRandowValues();
     ui->setupUi(this);
+
+    teacher = new Teacher(neuralNet);
 }
 
-void MainWindow::makeListwithRandomValues(int width, int height)
+QList<QList<double> > MainWindow::makeListwithRandomValues(int width, int height)
 {
     QList<QList<double>> weightsLay;
 
-
     for(int i = 0; i < width; i++){
-
       QList<double> tmp;
-
         for(int j = 0; j < height; j++){
             tmp.push_back(randomDoubleValues());
         }
-
          weightsLay.push_back(tmp);
     }
+
+    return weightsLay;
 }
 
 double MainWindow::randomDoubleValues()
 {
     int random = rand() % 100;
-    return randomValues = random / 100.0;
+    return random / 100.0;
 }
 
 

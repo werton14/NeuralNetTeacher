@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "NeuralNetwork/neuralnet.h"
+#include "NeuralNetwork/teacher.h"
 
 namespace Ui {
 class MainWindow;
@@ -16,14 +18,16 @@ public:
 
 
 
-    void makeListwithRandomValues(int,int);
+    QList<QList<double> > makeListwithRandomValues(int,int);
     double randomDoubleValues();
-    void setRandowValues();
 
     ~MainWindow();
 
 private:
     Ui::MainWindow *ui;
+    NeuralNet *neuralNet;
+    Teacher *teacher;
+
 };
 
 #endif // MAINWINDOW_H

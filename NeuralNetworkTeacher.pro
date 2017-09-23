@@ -17,11 +17,15 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     NeuralNetwork/neuralnet.cpp \
     NeuralNetwork/neuron.cpp \
-    NeuralNetwork/teacher.cpp
+    NeuralNetwork/teacher.cpp \
+    qxtspanslider.cpp
+
 
 HEADERS  += mainwindow.h \
     NeuralNetwork/neuralnet.h \
     NeuralNetwork/neuron.h \
-    NeuralNetwork/teacher.h
+    NeuralNetwork/teacher.h \
+    qxtspanslider.h \
+    qxtspanslider_p.h
 
 FORMS    += mainwindow.ui
