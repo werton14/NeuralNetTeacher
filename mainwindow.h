@@ -14,10 +14,10 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
 
-    QList<QList<double>> weightsHiddenLay;
-    QList<QList<double>> weightsOutputLay;
 
 
+    void makeListwithRandomValues(int,int);
+    double randomDoubleValues();
     void setRandowValues();
 
     ~MainWindow();
