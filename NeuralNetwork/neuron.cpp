@@ -1,6 +1,6 @@
 ﻿#include "neuron.h"
 
-Neuron::Neuron(int weightCount, QList<double> weights) : weightCount(weightCount), weights(weights)
+Neuron::Neuron(int weightsCount, QList<double> weights) : weightsCount(weightsCount), weights(weights)
 {
 
 }
@@ -29,7 +29,7 @@ void Neuron::weighInputSignal(int index, double signal)
 void Neuron::sumWeightedInputSignals()
 {
     double tmp = 0.0;
-    for(int i = 0; i < weightCount; i++){
+    for(int i = 0; i < weightsCount; i++){
         tmp += weightedInputSignals.at(i);
     }
     weightedSumInputSignals = tmp;
@@ -37,10 +37,10 @@ void Neuron::sumWeightedInputSignals()
 
 void Neuron::activationNeuronFunction()
 {
-    if(weightedInputSignals >= thresholdValue){
-        return 1;
+    if(weightedSumInputSignals >= thresholdValue){
+        outputSignal = 1;
     }else{
-        return 0;
+        outputSignal = 0;
     }
 }
 

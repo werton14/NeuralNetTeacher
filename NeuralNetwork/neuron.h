@@ -6,7 +6,7 @@
 class Neuron
 {
 private:
-    int weightCount = 0;
+    int weightsCount = 0;
     QList<double> weights;
     QList<double> weightedInputSignals;
     double weightedSumInputSignals = 0.0;
