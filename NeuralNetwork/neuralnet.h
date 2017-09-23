@@ -17,11 +17,11 @@ private:
     QList<Neuron*> hiddenLay;
     QList<Neuron*> outputLay;
 
-    void updateWeights(QList<QList<double> >, QList<QList<double> >);
 
 public:
     NeuralNet(int, int, int, QList<QList<double> >, QList<QList<double> >);
     void startWith(QList<double>);
+    void updateWeights(QList<QList<double> >, QList<QList<double> >);
 
 };
 
